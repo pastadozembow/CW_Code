@@ -1,9 +1,11 @@
 #include <stdio.h>
-int numberOf1 = 0;
-
+int numberOf1;
+int highNumber;
+int highNumberof1;
 int next_higher(int n) {
-    int highNumber = n + 1;
-    int highNumberof1 = 0;
+    numberOf1 = 0;
+    highNumber = n + 1;
+    highNumberof1 = 0;
     for (int i = 31; i >= 0; i--) {
         int k = n >> i;
         if (k & 1){
@@ -26,6 +28,6 @@ int next_higher(int n) {
 }
 
 int main(void){
-    int actual = next_higher(234881024);
+    int actual = next_higher(128868543);
     printf("%d", actual);
 }
